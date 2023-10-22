@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="surveyForm">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required />
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="India">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+          <option value="USA">UK</option>
+          <option value="China">UK</option>
+          <option value="Korea">UK</option>
+        </select>
+
+        <label>Gender</label>
+        <div class="gender-checkbox">
+          <input type="checkbox" id="male" name="gender" value="Male" />
+          <label for="male">Male</label>
+          <input type="checkbox" id="female" name="gender" value="Female" />
+          <label for="female">Female</label>
+        </div>
+
+        <label for="profession">Profession</label>
+        <input type="text" id="profession" name="profession" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" required />
+
+        <button class="submit-button" type="button" onclick="submitForm()">
+          Submit
+        </button>
+        <button class="reset-button" type="button" onclick="resetForm()">
+          Reset
+        </button>
+      </form>
+    </div>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2>Survey Form Submission</h2>
+        <p><strong>First Name:</strong> <span id="popupFirstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="popupLastName"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="popupDob"></span></p>
+        <p><strong>Country:</strong> <span id="popupCountry"></span></p>
+        <p><strong>Gender:</strong> <span id="popupGender"></span></p>
+        <p><strong>Profession:</strong> <span id="popupProfession"></span></p>
+        <p><strong>Email:</strong> <span id="popupEmail"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="popupMobile"></span></p>
+        <button class="submit-button" type="button" onclick="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
